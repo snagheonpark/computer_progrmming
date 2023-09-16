@@ -1,19 +1,19 @@
 # 환율표 딕셔너리 생성
-exchange_rates = {
+환율 = {
     "달러": 1320,  # 1달러 당 원화 환율
     "엔": 950,     # 1엔화 당 원화 환율
     "위안": 182     # 1위안화 당 원화 환율
 }
 
-# 철수가 가지고 있는 돈 리스트 생성
-wallet = [
-    {"currency": "달러", "amount": 13},
-    {"currency": "엔", "amount": 200},
-    {"currency": "위안", "amount": 13}
-]
+# 철수가 가진 돈을 리스트 요소로 하는 리스트 변수 생성
+돈 = [13, 200, 13]  # 각각 달러, 엔화, 위안
 
-# 각 통화를 원화로 환산하여 합산
-total_krw = sum(item["amount"] * exchange_rates[item["currency"]] for item in wallet)
+# 딕셔너리의 Key 값을 호출하여 리스트로 가져오기
+currencies = list(환율.keys())
+
+# 각 통화의 원화 가치 계산 및 리스트 슬라이싱을 사용한 계산
+krw_values = [돈[i] * 환율[currency] for i, currency in enumerate(currencies)]
 
 # 결과 출력
-print(f"철수가 가지고 있는 돈의 원화 가치는 {total_krw} 원 입니다.")
+X = sum(krw_values)
+print(f"철수가 가지고 있는 돈의 원화 가치는 {X}원 입니다.")
