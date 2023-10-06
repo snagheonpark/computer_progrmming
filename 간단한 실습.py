@@ -1,9 +1,19 @@
-a = input("나이를 입력하세요: ")
-print(a, type(a))
+numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
-age = int(a) #문자형을 숫자형으로 변환
+results = []
 
-if age > 19:
-    print("성인입니다.")
-else:
-    print("미성년자입니다.")
+for row in numbers:
+    for num in row:
+        if num % 2 == 0:
+           results.append(num)
+
+print(results)
+
+def add_numbers(a, b):
+    result = a + b
+    return result
+
+sum_result = add_numbers(5, 3)
+print("합계:", sum_result)
+
+
