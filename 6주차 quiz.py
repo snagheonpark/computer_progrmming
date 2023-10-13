@@ -19,8 +19,10 @@ class 붕어빵:
 슈크림.sell()
 슈크림.sell()
 슈크림.eat()
+print(슈크림.total)
 
 팥.sell()
 팥.eat()
+print(팥.total)
 
 print(슈크림.total + 팥.total)
