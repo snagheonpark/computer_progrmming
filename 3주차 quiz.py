@@ -9,11 +9,20 @@
 돈 = [13, 200, 13]  # 각각 달러, 엔화, 위안
 
 # 딕셔너리의 Key 값을 호출하여 리스트로 가져오기
-currencies = list(환율.keys())
+key = "달러"
+a = 환율[key]
+달러환산 = a*돈[0]
 
-# 각 통화의 원화 가치 계산 및 리스트 슬라이싱을 사용한 계산
-krw_values = [돈[i] * 환율[currency] for i, currency in enumerate(currencies)]
+key = "엔"
+b = 환율[key]
+엔환산 = b*돈[1]
 
-# 결과 출력
-X = sum(krw_values)
-print(f"철수가 가지고 있는 돈의 원화 가치는 {X}원 입니다.")
+key = "위안"
+c = 환율[key]
+위안환산 = c*돈[2]
+
+x = (달러환산+엔환산+위안환산)
+
+print(f"철수가 가지고 있는 돈의 원화가치는 {x}원 입니다")
+
+
