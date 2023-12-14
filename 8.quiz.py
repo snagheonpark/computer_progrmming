@@ -2,7 +2,7 @@ import random
 
 def 로또번호():
     results = []
-    for i in range(7):
+    for i in range(6):
         number = random.randint(1, 46)
         if number not in results:
             results.append(number)
