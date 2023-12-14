@@ -14,7 +14,7 @@ IceTea = Beverage("아이스티", 3000)
 while True:
     choose_beverage = input("주문할 음료를 선택하세요 (커피, 녹차, 아이스티 - 종료하려면 'exit' 입력): ")
 
-    if choose_beverage.lower() == 'exit':
+    if choose_beverage == 'exit':
         print("주문을 종료합니다.")
         break
 
